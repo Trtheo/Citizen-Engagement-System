@@ -1,0 +1,163 @@
+.container {
+  padding: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.dashboard-header h2 {
+  margin: 0;
+}
+
+.filters {
+  display: flex;
+  gap: 12px;
+  margin: 15px 0;
+  flex-wrap: wrap;
+}
+
+.filters input,
+.filters select {
+  padding: 8px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  min-width: 180px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  max-height: 400px;
+  overflow-y: auto;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+}
+
+.table-wrapper table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.table-wrapper th,
+.table-wrapper td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.pagination {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.pagination .btn {
+  padding: 8px 12px;
+  margin: 0 4px;
+  cursor: pointer;
+}
+
+.pie-chart {
+  max-width: 300px;
+  margin: 30px auto;
+}
+
+/* Buttons */
+.btn {
+  padding: 8px 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn-logout {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-profile {
+  background-color: #17a2b8;
+  color: white;
+}
+
+/* Profile Drawer Styles */
+.profile-drawer {
+  position: fixed;
+  top: 0;
+  right: -350px;
+  width: 300px;
+  height: 100%;
+  background: #fff;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  transition: right 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.profile-drawer.open {
+  right: 0;
+}
+
+.profile-drawer h3 {
+  margin-top: 0;
+}
+
+.profile-photo-wrapper {
+  text-align: center;
+  margin-bottom: 15px;
+  cursor:pointer;
+}
+.profile-photo:hover {
+  transform: scale(1.05);
+} 
+
+
+.profile-photo {
+  width: 300px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #007bff;
+  transition: transform 0.3s;
+
+}
+
+.file-input {
+  margin-top: 10px;
+  display: block;
+  width: 100%;
+}
+
+.password-form input,
+.profile-drawer input {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.password-form button,
+.profile-drawer button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
