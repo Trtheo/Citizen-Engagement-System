@@ -28,40 +28,6 @@ function RegisterForm() {
     const res = await axios.post('https://api.cloudinary.com/v1_1/trtheo/image/upload', data);
     return res.data.secure_url;
   };
-
-// const handleSubmit = async (e) => {
-//   e.preventDefault();
-
-//   try {
-//     let imageUrl = null;
-//     if (imageFile) {
-//       const data = new FormData();
-//       data.append('file', imageFile);
-//       data.append('upload_preset', 'citizen_system'); // your Cloudinary preset
-
-//       const uploadRes = await axios.post('https://api.cloudinary.com/v1_1/trtheo/image/upload', data);
-//       imageUrl = uploadRes.data.secure_url;
-//     }
-
-//     // ✅ Send JSON payload instead of FormData
-//     const payload = {
-//       name: form.name,
-//       email: form.email,
-//       password: form.password,
-//       profile_image: imageUrl || null
-//     };
-
-//     await axios.post('http://localhost:5000/api/auth/register', payload, {
-//       headers: { 'Content-Type': 'application/json' }
-//     });
-
-//     toast.success('Registered successfully');
-//     navigate('/login');
-//   } catch (err) {
-//     toast.error(err.response?.data?.error || 'Registration failed');
-//   }
-// };
-
 const handleSubmit = async (e) => {
   e.preventDefault();
 
@@ -93,11 +59,13 @@ const handleSubmit = async (e) => {
     console.log('Registration successful:', response.data);
     toast.success('Registered successfully');
     navigate('/login');
-  } catch (err) {
-    console.error('Registration error:', err.response || err.message);
-    toast.error(err.response?.data?.error || 'Registration failed');
-  }
+ } catch (err) {
+  console.error('Registration error:', err.response?.data || err.message);
+  const backendMessage = err.response?.data?.error;
+  toast.error(backendMessage || 'Registration failed, check console for details');
+}
 };
+
 
 
   return (

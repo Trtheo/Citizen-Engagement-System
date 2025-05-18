@@ -1,0 +1,90 @@
+.admin-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.menu-icon {
+  font-size: 22px;
+  cursor: pointer;
+  color: #333;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #f1f3f6;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.search-box input {
+  border: none;
+  background: transparent;
+  padding: 5px;
+  outline: none;
+  width: 150px;
+}
+
+.search-icon {
+  margin-right: 8px;
+  color: #888;
+}
+
+.notification-icon {
+  font-size: 18px;
+  cursor: pointer;
+  color: #444;
+}
+
+.avatar-img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+
+@media (max-width: 768px) {
+  .search-box input {
+    width: 100px;
+  }
+
+  .right-section {
+    gap: 10px;
+  }
+
+  .logo {
+    font-size: 16px;
+  }
+}
